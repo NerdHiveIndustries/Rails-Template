@@ -9,5 +9,6 @@ end
 
 group :test do
   gem 'rspec', '2.2.0'
-	gem 'spork', '0.9.0.rc7'
+  gem 'spork', '0.9.0.rc7'
+  gem 'webrat', '0.7.3'
 end
