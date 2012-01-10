@@ -19,7 +19,5 @@ group :test do
 end
 
 group :production do
-# Serving with nginx
 	 gem 'unicorn'
-
 end
