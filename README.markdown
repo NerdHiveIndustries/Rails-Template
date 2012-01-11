@@ -20,6 +20,7 @@ in Gemsets you RVMers) and should instead be installed via bundler into the proj
 we will be using ```bundle exec``` as a prefix for most commands. Don't worry, the template comes with a .gitignore that will ignore the installation directory of the gems. 
 
 To set up bundler to install gems in the app directory, do the following:  
+
 ```
 $ sudo mkdir ~/.bundle
 $ sudo vim ~/.bundle/config
