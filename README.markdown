@@ -21,7 +21,7 @@ we will be using ```bundle exec``` as a prefix for most commands. Don't worry, t
 
 To set up bundler to install gems in the app directory, do the following:  
 ```
-$ sudo mkdir ~/.bundle  
+$ sudo mkdir ~/.bundle
 $ sudo vim ~/.bundle/config
 ```
 
@@ -37,11 +37,13 @@ We need to grab the repo, install the gems from the Gemfile, and then
 rename the project using the ```rename_to``` plugin. Then rename the Rails-Template folder
 created when you cloned to repo to whatever you want.
   
-1. git clone git://github.com/joequery/Rails-Template.git
-2. cd Rails-Template
-3. bundle install
-4. bundle exec rails g rename_to YourAppName
-5. cd ../ && mv Rails-Template YourAppName
+```
+$ git clone git://github.com/joequery/Rails-Template.git
+$ cd Rails-Template
+$ bundle install
+$ bundle exec rails g rename_to YourAppName
+$ cd ../ && mv Rails-Template YourAppName
+```
 
 ### Using Guard, Spork, and Rspec
 This template comes with Guard, Spork and Rspec preconfigured for quick testing. To use the testing environment, you simply:  

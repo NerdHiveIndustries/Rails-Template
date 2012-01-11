@@ -10,6 +10,7 @@ group :development do
 
 # Git deployment
 	gem 'capistrano'
+	gem 'capistrano_colors'
 end
 
 group :test do
