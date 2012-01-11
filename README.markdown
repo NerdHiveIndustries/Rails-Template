@@ -12,22 +12,6 @@ Features
 * An example Unicorn file for use with Nginx
 * An example nginx configuration file
 
-
-Grabbing the template/creating your Rails App
---------------------------------------------- 
-
-We need to grab the repo, install the gems from the Gemfile, and then
-rename the project using the ```rename_to``` plugin. Then rename the 
-Rails-Template folder created when you cloned to repo to whatever you want.
-  
-```
-$ git clone git://github.com/joequery/Rails-Template.git
-$ cd Rails-Template
-$ bundle install
-$ bundle exec rails g rename_to YourAppName
-$ cd ../ && mv Rails-Template YourAppName
-```
-
 Configuring Bundler
 -------------------
 
@@ -50,6 +34,21 @@ The contents of ```~/.bundle/config``` will be
 BUNDLE_PATH: vendor/bundle
 ```
 
+Grabbing the template/creating your Rails App
+--------------------------------------------- 
+
+If you are using this template, you are no longer using "rails new project".
+Thus, we need to grab the repo, install the gems from the Gemfile, and then
+rename the project using the ```rename_to``` plugin. Then rename the 
+Rails-Template folder created when you cloned to repo to whatever you want.
+  
+```
+$ git clone git://github.com/joequery/Rails-Template.git
+$ cd Rails-Template
+$ bundle install
+$ bundle exec rails g rename_to YourAppName
+$ cd ../ && mv Rails-Template YourAppName
+```
 Using Guard, Spork, and Rspec
 ----------------------------- 
 
