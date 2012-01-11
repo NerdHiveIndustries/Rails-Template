@@ -40,4 +40,5 @@ set :keep_releases, 2
 # ######################################################
 #ssh_options[:paranoid] = false
 
+# Run bundle install on remote server
 require "bundler/capistrano"
