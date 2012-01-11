@@ -16,12 +16,12 @@ Usage
 
 ### Configuring Bundler
 This template was built using my opinion that gems should rarely be installed system wide (or even
-in Gemsets you RVMers) and should instead be installed via bundle into the project directory. Thus,
-we will be using ```bundle exec``` as a prefix for most commands.
+in Gemsets you RVMers) and should instead be installed via bundler into the project directory. Thus,
+we will be using ```bundle exec``` as a prefix for most commands. Don't worry, the template comes with a .gitignore that will ignore the installation directory of the gems. 
 
-To set up bundle to install gems in the app directory, do the following:  
+To set up bundler to install gems in the app directory, do the following:  
 ```
-$ sudo mkdir ~/.bundle
+$ sudo mkdir ~/.bundle  
 $ sudo vim ~/.bundle/config
 ```
 
@@ -44,3 +44,13 @@ created when you cloned to repo to whatever you want.
 5. cd ../ && mv Rails-Template YourAppName
 
 ### Using Guard, Spork, and Rspec
+This template comes with Guard, Spork and Rspec preconfigured for quick testing. To use the testing environment, you simply:  
+
+1. cd to YourApp directory
+2. In one shell session (consider opening a new tab in iTerm), execute  
+``` bundle exec guard ```  
+3. In another shell session, execute the call to rspec.  
+``` bundle exec rspec spec/ ```
+
+Since we're using bundler and installing gems in the project, using ``` bundle exec ``` is necessary.
+
