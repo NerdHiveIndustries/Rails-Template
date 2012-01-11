@@ -8,7 +8,11 @@
 
 worker_processes 4
 
-APP_PATH = "/var/www/yourapp"
+################################################################################
+# Adjust your APP_PATH here!!!
+################################################################################
+APP_PATH = "/var/www/yourapp" # NO trailing slash
+
 working_directory APP_PATH
 listen "/tmp/.sock", :backlog => 64
 listen 8080, :tcp_nopush => true
