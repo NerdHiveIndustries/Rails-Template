@@ -43,6 +43,9 @@ set :keep_releases, 2
 # Run bundle install on remote server
 require "bundler/capistrano"
 
+# Run bundler without development and production gems
+set :bundle_without,  [:development, :test]
+
 # Color capistrano output for readability
 require "capistrano_colors"
 
