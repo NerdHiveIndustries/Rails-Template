@@ -43,6 +43,9 @@ class RenameToGenerator < Rails::Generators::Base
       gsub_file 'Rakefile', /(#{Regexp.escape(old_name.capitalize)})(::Application.load_tasks)/mi do |match|
         "#{new_name_capitalized}::Application.load_tasks"
       end
+			gsub_file 'spec/spec_helper.rb', /(#{Regexp.escape(old_name.capitalize)})(::Application    .reload_routes!)/mi do |match|
+			 "#{new_name_capitalized}::Application.reload_routes!"
+			 end
     end
   end
 end
