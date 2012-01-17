@@ -33,8 +33,8 @@ set :keep_releases, 2
 #$:.unshift(File.expand_path('./lib', ENV['rvm_path']))
 # Load RVM's capistrano plugin.    
 #require "rvm/capistrano"
-#set :rvm_ruby_string, '1.9.2'
-#set :rvm_type, :user  # Don't use system-wide RVM
+#set :rvm_ruby_string, '1.9.3'
+#set :rvm_type, :user  # Comment out if using system wide RVM
 # ######################################################
 # #               End RVM Configurations               #
 # ######################################################
@@ -45,6 +45,7 @@ require "bundler/capistrano"
 
 # Run bundler without development and production gems
 set :bundle_without,  [:development, :test]
+set :bundle_flags, ""
 
 # Color capistrano output for readability
 require "capistrano_colors"
