@@ -1,6 +1,6 @@
-################################################################################
+#
 # Much thanks to http://ryanflorence.com/deploying-with-capistrano-without-rails/
-################################################################################
+#
 
 # replace these with your server's information
 set :domain,  "yourserver.com"
@@ -25,19 +25,21 @@ set :use_sudo, false
 set :keep_releases, 2
 #set :git_shallow_clone, 1
 
+#
 # Uncomment the following section if your server uses RVM
-# ######################################################
-# #                RVM Configurations                  #
-# ######################################################
+#
+
 # Add RVM's lib directory to the load path.
 #$:.unshift(File.expand_path('./lib', ENV['rvm_path']))
-# Load RVM's capistrano plugin.    
+# Load RVM's capistrano plugin.
 #require "rvm/capistrano"
 #set :rvm_ruby_string, '1.9.3'
 #set :rvm_type, :user  # Comment out if using system wide RVM
-# ######################################################
-# #               End RVM Configurations               #
-# ######################################################
+
+#
+# End RVM Configuration
+#
+
 #ssh_options[:paranoid] = false
 
 # Run bundle install on remote server
@@ -49,4 +51,3 @@ set :bundle_flags, ""
 
 # Color capistrano output for readability
 require "capistrano_colors"
-
