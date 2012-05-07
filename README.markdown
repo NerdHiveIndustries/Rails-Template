@@ -13,17 +13,15 @@ Features
 Grabbing the template/creating your Rails App
 ---------------------------------------------
 
-If you use this template, you will no longer run "rails new project".
-Thus, we need to grab the repo, install the gems from the Gemfile, 
-rename the application, then rename the
-Rails-Template folder created when you cloned to repo to whatever you want.
-We will use a bash function to automate this process. Append the
-following to your ```~/.bashrc``` file:
+If you use this template, you will no longer run "rails new project". Thus, we need to grab the repo, install the gems from the Gemfile, then rename the application. We will use a bash function to automate this process. Append the following to your ```~/.bashrc``` file:
 
 ```
 # Create a new rails app from the Rails Template.
 # arg1: app_name
 function newrailsapp(){
+  if [ "$#" -eq "0" ]; then
+    return
+  fi
   app_name=$1
   echo -e "#\n# Cloning template\n#"
 
@@ -43,6 +41,8 @@ function newrailsapp(){
   echo -e "#\n# Renaming rails app to $app_name\n#"
 
   bundle exec rails g rename_app $app_name
+  rm config/initializers/rename_app.rb
+  rm lib/rename_app.rb
 
   echo -e "#\n# Creating git repository and adding files\n#"
 
