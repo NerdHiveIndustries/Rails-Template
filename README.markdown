@@ -14,8 +14,8 @@ Grabbing the template/creating your Rails App
 ---------------------------------------------
 
 If you use this template, you will no longer run "rails new project".
-Thus, we need to grab the repo, install the gems from the Gemfile, and then
-rename the project using the ```rename_to``` plugin. Then rename the
+Thus, we need to grab the repo, install the gems from the Gemfile, 
+rename the application, then rename the
 Rails-Template folder created when you cloned to repo to whatever you want.
 We will use a bash function to automate this process. Append the
 following to your ```~/.bashrc``` file:
@@ -59,10 +59,4 @@ $ source ~/.bashrc
 
 Now, to create a new app from this template, simply execute
 
-$ rails_template YourRailsApp
-
-View the wiki!
---------------
-
-Details on implementing the features of the template can be found
-[in the wiki](https://github.com/NerdHiveIndustries/Rails-Template/wiki)
+$ newrailsapp YourRailsApp
