@@ -1,4 +1,4 @@
-Testapp::Application.routes.draw do
+Templateapp::Application.routes.draw do
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

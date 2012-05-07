@@ -5,4 +5,4 @@ require File.expand_path('../config/application', __FILE__)
 require 'rake'
 
 include Rake::DSL
-Testapp::Application.load_tasks
+Templateapp::Application.load_tasks
