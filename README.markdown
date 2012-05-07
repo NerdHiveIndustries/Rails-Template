@@ -42,7 +42,7 @@ function newrailsapp(){
 
   echo -e "#\n# Renaming rails app to $app_name\n#"
 
-  bundle exec rails g rename_to $app_name
+  bundle exec rails g rename_app $app_name
 
   echo -e "#\n# Creating git repository and adding files\n#"
 
